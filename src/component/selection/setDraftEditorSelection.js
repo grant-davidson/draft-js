@@ -214,12 +214,14 @@ function setDraftEditorSelection(
         anchorOffset - nodeStart,
         selectionState,
       );
-      addFocusToSelection(
-        selection,
-        storedFocusNode,
-        storedFocusOffset,
-        selectionState,
-      );
+	  if (storedFocusNode) {
+		  addFocusToSelection(
+			selection,
+			storedFocusNode,
+			storedFocusOffset,
+			selectionState,
+		  );
+	  }
     }
   }
 }
